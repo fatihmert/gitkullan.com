@@ -215,12 +215,12 @@
                 <h1>git - ileri seviye</h1>
             </section>
             <section id="adv1">
-                <h1>git - son değişiklikleri ziplemek</h1>
-                <div class="cmd">git archive -o ../guncelleme.zip HEAD $(git diff --name-only HEAD^)</div>
+                <h1>son değişiklikleri ziplemek</h1>
+                <div class="cmd w-50">git archive -o ../guncelleme.zip HEAD $(git diff --name-only HEAD^)</div>
             </section>
             <section id="adv2">
-                <h1>git - iki commit arasındaki değiştirilmiş dosyaları ziplemek</h1>
-                <div class="cmd">git archive -o ../son.zip &lt;yeni_commit_id&gt; $(git diff --name-only &lt;eski_commit_id&gt; &lt;yeni_commit_id&gt;)</div>
+                <h1>iki commit arasındaki değiştirilmiş dosyaları ziplemek</h1>
+                <div class="cmd w-50">git archive -o ../son.zip &lt;yeni_commit_id&gt; $(git diff --name-only &lt;eski_commit_id&gt; &lt;yeni_commit_id&gt;)</div>
             </section>
 
         </section>
@@ -241,5 +241,22 @@
         </aside>
     </div>
 
+
+    <script type="text/javascript">
+        function copyClipboard(){
+            let willCopy = this.innerHTML;
+            let input = document.createElement("input");
+            input.setAttribute("value", willCopy);
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand("copy");
+            document.body.removeChild(input);
+        }
+
+        let commands = document.getElementsByClassName('cmd');
+        for(let i = 0; i < commands.length; i++){
+            commands[i].addEventListener('click',copyClipboard,false);
+        }
+    </script>
 </body>
 </html>

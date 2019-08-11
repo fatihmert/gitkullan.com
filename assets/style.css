@@ -33,15 +33,13 @@
     padding-right:0px!important;
 }
 
-.text-center{
-    text-align: center!important;
-}
+.text-center{text-align: center!important;}
+.text-left{text-align: left!important;}
 
-.text-left{
-    text-align: left!important;
-}
-
-
+.w-25{width: 25%!important;}
+.w-50{width: 50%!important;}
+.w-75{width: 75%!important;}
+.w-100{width: 100%!important;}
 
 /*
     BEM
@@ -78,10 +76,16 @@ section h1, section h2{
     font-family: 'DM Serif Display', serif;
 }
 
-section h1{
+section:not([id^="adv"]) h1{
     font-size:48px;
     line-height: 10rem;
     color:#000;
+}
+
+section[id^="adv"] h1{
+    line-height: 3rem;
+    margin-bottom: 25px;
+    font-size:36px;
 }
 
 section h1 > em{
