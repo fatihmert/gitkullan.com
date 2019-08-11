@@ -26,10 +26,24 @@ body{
     overflow-x: hidden;
 }
 
-section{
-    padding-top: 30px;
-    padding-bottom: 100px;
-    width: 100%;
+/*section{*/
+    /*padding-top: 30px;*/
+    /*padding-bottom: 100px;*/
+    /*width: 100%;*/
+/*}*!*/
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*
+section.container section{
+    width: 70% !important;
+}
+
+aside section{
+    width: 30%!important;
 }
 
 section h1, section h2{
@@ -65,7 +79,7 @@ tr td:first-child{
 
 tr td:last-child{
     text-align: right;
-}
+}*/
 
 
 

@@ -19,12 +19,54 @@
     background-color: #787677;
 }
 
-body{
+/*
+    BEM
+*/
+
+.gutter{
+    padding-left:15px!important;
+    padding-right:15px!important;
+}
+
+.no-gutter{
+    padding-left:0px!important;
+    padding-right:0px!important;
+}
+
+.text-center{
+    text-align: center!important;
+}
+
+.text-left{
+    text-align: left!important;
+}
+
+
+
+/*
+    BEM
+*/
+
+body, .wrapper aside{
     display: flex;
     flex-direction: column;
     text-align: center;
     overflow-x: hidden;
 }
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.wrapper aside{
+    width: 40%;
+    background: #ecf0f1;
+    margin-top:30px;
+}
+
 
 section{
     padding-top: 30px;
@@ -72,8 +114,31 @@ tr td:last-child{
     text-align: right;
 }
 
+aside section p{
+    font-size: 1.5rem !important;
+    color:rgba(0,0,0,.35);
+}
 
+aside .qa-item{
+    background: rgba(0,0,0,.05);
+    width: 100%;
+    border-bottom:3px dotted rgba(0,0,0,.1);
+}
 
+aside .qa-item .source{
+    color:rgba(0,0,0,.35);
+    padding:5px;
+}
+
+aside .qa-item .source:hover{
+    color:rgba(0,0,0,.5);
+}
+
+aside .qa-item h1.question,
+aside .qa-item p.answer,
+aside .qa-item p.answer .cmd{
+    font-size:1rem!important;
+}
 
 /* SEPCIALs */
 
@@ -193,7 +258,7 @@ section#step9 h1, section#step9{
 }
 
 section#tricks{
-  background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d); 
+  background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
 }
 
 

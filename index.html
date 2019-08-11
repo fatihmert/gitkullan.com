@@ -19,216 +19,227 @@
         <h1><i class="devicon-git-plain"></i> git - kullan uğraştırma</h1>
         <h2>git anlaşılır temiz kullanım rehberi</h2>
         <p>
-        	by <a href="http://fatihmertdogancan.com" target="_blank">Fatih Mert Doğancan</a>, 
+        	by <a href="http://fatihmertdogancan.com" target="_blank">Fatih Mert Doğancan</a>,
         	<a href="https://github.com/fatihmert/gitkullan.com">repository</a>
         </p>
         <p><em>CSS3 Flex, Material UI Renkleri ve DevIcons kullanılmıştır</em></p>
     </section>
-    <section id="install">
-        <h1>git - kurulum</h1>
-        <div class="install-packages">
-            <div class="install-item">
-                <a href="https://book.git-scm.com/download/mac" target="_blank">
-                    <i class="devicon-apple-original"></i>
-                    MacOS
-                </a>
-            </div>
-            <div class="install-item">
-                <a href="https://book.git-scm.com/download/linux" target="_blank">
-                    <i class="devicon-linux-plain"></i>
-                    Linux
-                </a>
-            </div>
-            <div class="install-item">
-                <a href="https://book.git-scm.com/download/win" target="_blank">
-                    <i class="devicon-windows8-original"></i>
-                    Windows
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="step1">
-        <h1>git - depo oluşturmak</h1>
-        <p>Yeni depo oluşturmak için klasör içerisinde;</p>
-            <div class="cmd">git init</div>
-        <p>komutunu çalıştırın</p>
-    </section>
-    <section id="step2">
-        <h1>git - depo kopyalamak</h1>
-        <p>Deponuzun çalışan kopyasını oluşturmak için;</p>
-            <div class="cmd">git clone /yol/depo</div>
-        <p>github, bitbucket gibi uzak sunucular için;</p>
-            <div class="cmd">git clone kullaniciAdi@sunucu:/yol/depo</div>
-        <p>Master dışında farklı bir branch için; <em>(yukarıdaki her iki durum için de geçerlidir)</em></p>
-            <div class="cmd">git clone -b &lt;dal_adi&gt; /yol/depo</div> <br>
-            <div class="cmd">git clone -b &lt;dal_adi&gt; kullaniciAdi@sunucu:/yol/depo</div>
-        <!-- direk örnekler -->
-    </section>
-    <section id="step3">
-        <h1>git - hayat döngüsü</h1>
-        <object type="image/svg+xml" data="assets/life-cycle.svg" width="50%"></object>
-        <p>
-            Deponuz git tarafından yönetilen 3
-            <em>ağaçtan</em> oluşur.
-            <table>
-                <tr>
-                    <td>İlki dosyalarınızı tutan</td>
-                    <td><div class="cmd">working dir</div></td>
-                </tr>
-                <tr>
-                    <td>İkincisi dosyalarınızı tuttuğunuz</td>
-                    <td><div class="cmd">stage</div></td>
-                </tr>
-                <tr>
-                    <td>Sonuncusu yaptığınız commit'i gösteren</td>
-                    <td><div class="cmd">head</div></td>
-                </tr>
-            </table>
-        </p>
-    </section>
-    <section id="step4">
-        <h1>git - eklemek &amp; işlemek</h1>
-        <p>
-            Değişikliklerinizi <em>stage</em>'e belirtmek için, 
-        </p>
-        <div class="cmd">git &lt;dosya/klasörAdı&gt;</div>
-        <p>
-        	düzenli ifadeleri destekler
-        </p>
-        <div class="cmd">git *</div>
-		<p>
-			git hayat döngüsünde ilk adımdır. Yaptığınız <br> değişikliklere not düşüp işlemek gerekecektir
-		</p> 
-		<div class="cmd">git commit -m "notunuz"</div>
-		<p>
-			Hayat döngüsündeki son aşama olan <em>head</em> bölümüne <br> eklendi, henüz sunucu da değiller.
-		</p>
-    </section>
-    <section id="step5">
-        <h1>git - sunucuya göndermek</h1>
-        <object type="image/svg+xml" data="assets/remote-repo.svg" width="50%"></object>
-        <p>
-            Değişiklikleriniz yerel depodaki <em>head</em> içerisinde, sunucuya göndermek için;
-        </p>
-        <div class="cmd">git push origin master</div>
-        <p>
-        	değişiklikleriniz master dalına gider, kodlarınızın kararlı olduğu daldır.
-        </p>
-        <br>
-		<p>
-			sunucunuz (uzak depo; github, bitbucket vs.) yoksa, eklemek için;
-		</p> 
-		<div class="cmd">git remote add origin &lt;sunucu&gt;</div>
-    </section>
-    <section id="step6">
-        <h1>git - dallar</h1>
-        <object type="image/svg+xml" data="assets/branches.svg" width="50%"></object>
-        <p>
-            Farklı özellikleri ayrı ayrı geliştirmek için dallar tercih edilir. Varsayılan dal <em>master</em>'dır. <br>
-            Diğer dallar geliştirildikten sonra <em>master</em>'a birleştirilir.
-        </p>
-        <p>
-        	"ozellik_a" adıyla yeni bir dal oluşturup o dala geçmek için
-        </p>
-        <div class="cmd">git checkout -b ozellik_a</div>
-        <p>
-        	<em>master</em>'a geri geçmek için
-        </p>
-        <div class="cmd">git checkout master</div>
-        <p>
-        	oluşturduğumuz dalı silmek için
-        </p>
-        <div class="cmd">git branch -d ozellik_a</div>
-        <br>
-		<p>
-			bir dalı uzak deponuza göndermedikçe başkaları tarafından kullanılamaz
-		</p> 
-		<div class="cmd">git push origin &lt;dal&gt;</div>
-    </section>
-    <section id="step7">
-        <h1>git - güncelleme &amp; birleştirme</h1>
-        <p>
-            Son işlenen değişiklikleri yerel deponuza almak için
-        </p>
-        <div class="cmd">git pull</div>
-        <p>
-        	Alınan bu değişiklikleri alma <em>fetch</em> ve birleştirme <em>merge</em> <br>
-        	işlemlerine tabi tutacaktır.
-        </p>
-        <p>
-        	Aktif çalıştığınız <em>dal</em>a başka bir dalı birleştirmek için
-        </p>
-        <div class="cmd">git merge &lt;dal&gt;</div>
-        <p>
-        	Her iki durum için, <strong>git</strong> değişiklikleri <br>
-        	otomatik birleştirme <em>auto-merging</em> dener. <br>
-        	Her zaman mümkün olmamakla birlikte çakışmalarla <em>conflict</em> sonulanabilir. <br>
-        	<strong>git</strong> size çakışmaları gösterdiği takdirde <br>
-        	el ile düzeltmek size düşer. <br>
-        </p>
-        <p>Değişikliklerden sonra dosya eklemek için</p>
-        <div class="cmd">git add &lt;dosya/klasörAdı&gt;</div>
-        <p>
-        	değişiklikleri birleştirmeden önce dallar arasındaki <br>
-        	farklılıkları görmek için
-        </p>
-        <div class="cmd">git diff &lt;kaynak_dal&gt; &lt;hedef_dal&gt;</div>
-    </section>
-    <section id="step8">
-        <h1>git - sürümleme <em>tag</em></h1>
-        <p>
-            Deponuz için sürüm adı <em>tag</em> oluşturmanız tavsiye edilir. <br>
-            SVN'de de mevcut olan aşina olunan bir kavramdır. <br> 0.1 adıyla bir <strong>tag</strong> oluşturmak için 
-        </p>
-        <div class="cmd">git tag 0.1 edf04a7</div>
-        <p>
-        	<em>edf04a7</em> deponuzdaki işlenen <em>commit</em> numarasının ilk 10 karakteridir. <br>
-        	Tüm işlenen numaralarını görmek için
-        </p>
-        <div class="cmd">git log</div>
-    </section>
-    <section id="step9">
-        <h1>git - yerel değişiklikleri geri almak</h1>
-        <object type="image/svg+xml" data="assets/undoing.svg" width="50%"></object>
-        <p>
-            Yanlış birşey yapmanız durumunda <br> yerel deponuzdaki değişiklikleri geri almak için
-        </p>
-        <div class="cmd">git checkout -- &lt;dosyaadı&gt;</div>
-        <p>
-        	bu işlem, <em>head</em> içerisindeki son içerik <br>
-        	ile değiştirilir. Diğer dosyalar güvende.
-        </p>
-        <p>
-        	Bütüm yerel değişiklik ve işlenenlerinizi iptal etmek istiyorsanız, <br>
-        	sunucudan en son kayıtları getirin
-        </p>
-        <div class="cmd">git fetch origin</div>
-        <p>
-        	ve yerel master dalınıza gösterin
-        </p>
-        <div class="cmd">git reset --hard origin/master</div>
-    </section>
-    <section id="rainbow">
-    	<h1>git - renkli çıktı</h1>
-    	<div class="cmd">git config color.ui true</div>
-    </section>
-    <section id="tricks">
-        <h1>git - tricks <em>Hayat kurtaran komutlar</em></h1>
-        <p>
-            Son değişiklik yapılan dosya adlarını listelemek
-        </p>
-        <div class="cmd">git diff --name-only</div>
-    </section>
-    <section id="redline">
-        <h1>git - ileri seviye</h1>
-    </section>
-    <section id="adv1">
-        <h1>git - son değişiklikleri ziplemek</h1>
-        <div class="cmd">git archive -o ../guncelleme.zip HEAD $(git diff --name-only HEAD^)</div>
-    </section>
-    <section id="adv2">
-        <h1>git - iki commit arasındaki değiştirilmiş dosyaları ziplemek</h1>
-        <div class="cmd">git archive -o ../son.zip &lt;yeni_commit_id&gt; $(git diff --name-only &lt;eski_commit_id&gt; &lt;yeni_commit_id&gt;)</div>
-    </section>
+    <div class="wrapper">
+        <section class="container">
+            <section id="install">
+                <h1>git - kurulum</h1>
+                <div class="install-packages">
+                    <div class="install-item">
+                        <a href="https://book.git-scm.com/download/mac" target="_blank">
+                            <i class="devicon-apple-original"></i>
+                            MacOS
+                        </a>
+                    </div>
+                    <div class="install-item">
+                        <a href="https://book.git-scm.com/download/linux" target="_blank">
+                            <i class="devicon-linux-plain"></i>
+                            Linux
+                        </a>
+                    </div>
+                    <div class="install-item">
+                        <a href="https://book.git-scm.com/download/win" target="_blank">
+                            <i class="devicon-windows8-original"></i>
+                            Windows
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="step1">
+                <h1>git - depo oluşturmak</h1>
+                <p>Yeni depo oluşturmak için klasör içerisinde;</p>
+                <div class="cmd">git init</div>
+                <p>komutunu çalıştırın</p>
+            </section>
+            <section id="step2">
+                <h1>git - depo kopyalamak</h1>
+                <p>Deponuzun çalışan kopyasını oluşturmak için;</p>
+                <div class="cmd">git clone /yol/depo</div>
+                <p>github, bitbucket gibi uzak sunucular için;</p>
+                <div class="cmd">git clone kullaniciAdi@sunucu:/yol/depo</div>
+                <!-- direk örnekler -->
+            </section>
+            <section id="step3">
+                <h1>git - hayat döngüsü</h1>
+                <object type="image/svg+xml" data="assets/life-cycle.svg" width="50%"></object>
+                <p>
+                    Deponuz git tarafından yönetilen 3
+                    <em>ağaçtan</em> oluşur.
+                <table>
+                    <tr>
+                        <td>İlki dosyalarınızı tutan</td>
+                        <td><div class="cmd">working dir</div></td>
+                    </tr>
+                    <tr>
+                        <td>İkincisi dosyalarınızı tuttuğunuz</td>
+                        <td><div class="cmd">stage</div></td>
+                    </tr>
+                    <tr>
+                        <td>Sonuncusu yaptığınız commit'i gösteren</td>
+                        <td><div class="cmd">head</div></td>
+                    </tr>
+                </table>
+                </p>
+            </section>
+            <section id="step4">
+                <h1>git - eklemek &amp; işlemek</h1>
+                <p>
+                    Değişikliklerinizi <em>stage</em>'e belirtmek için,
+                </p>
+                <div class="cmd">git &lt;dosya/klasörAdı&gt;</div>
+                <p>
+                    düzenli ifadeleri destekler
+                </p>
+                <div class="cmd">git *</div>
+                <p>
+                    git hayat döngüsünde ilk adımdır. Yaptığınız <br> değişikliklere not düşüp işlemek gerekecektir
+                </p>
+                <div class="cmd">git commit -m "notunuz"</div>
+                <p>
+                    Hayat döngüsündeki son aşama olan <em>head</em> bölümüne <br> eklendi, henüz sunucu da değiller.
+                </p>
+            </section>
+            <section id="step5">
+                <h1>git - sunucuya göndermek</h1>
+                <object type="image/svg+xml" data="assets/remote-repo.svg" width="50%"></object>
+                <p>
+                    Değişiklikleriniz yerel depodaki <em>head</em> içerisinde, sunucuya göndermek için;
+                </p>
+                <div class="cmd">git push origin master</div>
+                <p>
+                    değişiklikleriniz master dalına gider, kodlarınızın kararlı olduğu daldır.
+                </p>
+                <br>
+                <p>
+                    sunucunuz (uzak depo; github, bitbucket vs.) yoksa, eklemek için;
+                </p>
+                <div class="cmd">git remote add origin &lt;sunucu&gt;</div>
+            </section>
+            <section id="step6">
+                <h1>git - dallar</h1>
+                <object type="image/svg+xml" data="assets/branches.svg" width="50%"></object>
+                <p>
+                    Farklı özellikleri ayrı ayrı geliştirmek için dallar tercih edilir. Varsayılan dal <em>master</em>'dır. <br>
+                    Diğer dallar geliştirildikten sonra <em>master</em>'a birleştirilir.
+                </p>
+                <p>
+                    "ozellik_a" adıyla yeni bir dal oluşturup o dala geçmek için
+                </p>
+                <div class="cmd">git checkout -b ozellik_a</div>
+                <p>
+                    <em>master</em>'a geri geçmek için
+                </p>
+                <div class="cmd">git checkout master</div>
+                <p>
+                    oluşturduğumuz dalı silmek için
+                </p>
+                <div class="cmd">git branch -d ozellik_a</div>
+                <br>
+                <p>
+                    bir dalı uzak deponuza göndermedikçe başkaları tarafından kullanılamaz
+                </p>
+                <div class="cmd">git push origin &lt;dal&gt;</div>
+            </section>
+            <section id="step7">
+                <h1>git - güncelleme &amp; birleştirme</h1>
+                <p>
+                    Son işlenen değişiklikleri yerel deponuza almak için
+                </p>
+                <div class="cmd">git pull</div>
+                <p>
+                    Alınan bu değişiklikleri alma <em>fetch</em> ve birleştirme <em>merge</em> <br>
+                    işlemlerine tabi tutacaktır.
+                </p>
+                <p>
+                    Aktif çalıştığınız <em>dal</em>a başka bir dalı birleştirmek için
+                </p>
+                <div class="cmd">git merge &lt;dal&gt;</div>
+                <p>
+                    Her iki durum için, <strong>git</strong> değişiklikleri <br>
+                    otomatik birleştirme <em>auto-merging</em> dener. <br>
+                    Her zaman mümkün olmamakla birlikte çakışmalarla <em>conflict</em> sonulanabilir. <br>
+                    <strong>git</strong> size çakışmaları gösterdiği takdirde <br>
+                    el ile düzeltmek size düşer. <br>
+                </p>
+                <p>Değişikliklerden sonra dosya eklemek için</p>
+                <div class="cmd">git add &lt;dosya/klasörAdı&gt;</div>
+                <p>
+                    değişiklikleri birleştirmeden önce dallar arasındaki <br>
+                    farklılıkları görmek için
+                </p>
+                <div class="cmd">git diff &lt;kaynak_dal&gt; &lt;hedef_dal&gt;</div>
+            </section>
+            <section id="step8">
+                <h1>git - sürümleme <em>tag</em></h1>
+                <p>
+                    Deponuz için sürüm adı <em>tag</em> oluşturmanız tavsiye edilir. <br>
+                    SVN'de de mevcut olan aşina olunan bir kavramdır. <br> 0.1 adıyla bir <strong>tag</strong> oluşturmak için
+                </p>
+                <div class="cmd">git tag 0.1 edf04a7</div>
+                <p>
+                    <em>edf04a7</em> deponuzdaki işlenen <em>commit</em> numarasının ilk 10 karakteridir. <br>
+                    Tüm işlenen numaralarını görmek için
+                </p>
+                <div class="cmd">git log</div>
+            </section>
+            <section id="step9">
+                <h1>git - yerel değişiklikleri geri almak</h1>
+                <object type="image/svg+xml" data="assets/undoing.svg" width="50%"></object>
+                <p>
+                    Yanlış birşey yapmanız durumunda <br> yerel deponuzdaki değişiklikleri geri almak için
+                </p>
+                <div class="cmd">git checkout -- &lt;dosyaadı&gt;</div>
+                <p>
+                    bu işlem, <em>head</em> içerisindeki son içerik <br>
+                    ile değiştirilir. Diğer dosyalar güvende.
+                </p>
+                <p>
+                    Bütüm yerel değişiklik ve işlenenlerinizi iptal etmek istiyorsanız, <br>
+                    sunucudan en son kayıtları getirin
+                </p>
+                <div class="cmd">git fetch origin</div>
+                <p>
+                    ve yerel master dalınıza gösterin
+                </p>
+                <div class="cmd">git reset --hard origin/master</div>
+            </section>
+            <section id="rainbow">
+                <h1>git - renkli çıktı</h1>
+                <div class="cmd">git config color.ui true</div>
+            </section>
+            <section id="redline">
+                <h1>git - ileri seviye</h1>
+            </section>
+            <section id="adv1">
+                <h1>git - son değişiklikleri ziplemek</h1>
+                <div class="cmd">git archive -o ../guncelleme.zip HEAD $(git diff --name-only HEAD^)</div>
+            </section>
+            <section id="adv2">
+                <h1>git - iki commit arasındaki değiştirilmiş dosyaları ziplemek</h1>
+                <div class="cmd">git archive -o ../son.zip &lt;yeni_commit_id&gt; $(git diff --name-only &lt;eski_commit_id&gt; &lt;yeni_commit_id&gt;)</div>
+            </section>
+
+        </section>
+        <aside class="question-answer">
+            <section class="initialization no-gutter">
+                <h1>SORU &amp; CEVAP</h1>
+                <p>İnternette rastlamış olduğum benzersiz soruları ve cevapları burada listeliyor olacağım.</p>
+            </section>
+            <section class="qa-item no-gutter text-left">
+                <h1 class="question text-center">
+                    SORU ORNEĞİ 1
+                </h1>
+                <p class="answer text-center">
+                    soru cevabı <span class="cmd">kodu</span>
+                </p>
+                <a href="#" target="_blank" class="source">Kaynak</a>
+            </section>
+        </aside>
+    </div>
+
 </body>
 </html>
