@@ -110,6 +110,10 @@ section:not(#info) p, td{
     margin-top:3px;
 }
 
+.cmd:hover{
+    cursor:pointer;
+}
+
 tr td:first-child{
     text-align: left;
 }
