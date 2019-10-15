@@ -210,7 +210,7 @@
             <section id="step10">
                 <h1>git - bir önceki commit'e geçiş</h1>
                 <p>
-                    Bir önceki commit'e geçiş yapabilmek için
+                    Bir önceki commit'e geçiş yapabilmek için. CommitID'leri hash formatındadır.
                 </p>
                 <div class="cmd">git checkout &lt;commit_id&gt; .</div>
                 <p>
@@ -220,6 +220,20 @@
                     Bu durumu tersine çevirmek için
                 </p>
                 <div class="cmd">git reset --hard</div>
+            </section>
+            <section id="step11">
+                <h1>git - commit geçişmişi</h1>
+                <p>
+                    Aşağıdaki komutu yazmanız yeterlidir,
+                </p>
+                <div class="cmd">git log</div>
+                <p>
+                    2 hafta boyunca olan logları listelemek için
+                </p>
+                <div class="cmd">git log --since=2.weeks</div>
+                <p>
+                    Normal tarih formatlarını kullanabilirsiniz; "2008-01-15", "2 years 1 day 3 minutes ago" gibi.
+                </p>
             </section>
             <section id="rainbow">
                 <h1>git - renkli çıktı</h1>

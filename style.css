@@ -202,6 +202,24 @@ section#step9 h1, section#step9{
 }
 
 
+section#step10{
+    background-color: #4E342E;
+}
+
+section#step10 h1, section#step10{
+    color: #795548;
+}
+
+
+section#step11{
+    background-color: #AD1457;
+}
+
+section#step11 h1, section#step11{
+    color: #E91E63;
+}
+
+
 section#rainbow{
     background: linear-gradient(45deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
 }
