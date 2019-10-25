@@ -1,0 +1,31 @@
+{
+  "name": "gitkullan.com",
+  "homepage": "https://gitkullan.com",
+  "authors": [
+    "Fatih Mert <fmdogancan95@gmail.com>"
+  ],
+  "description": "git anlaşılır rehber",
+  "main": "index.html",
+  "keywords": [
+    "git",
+    "git",
+    "komutları",
+    "git",
+    "kullanımı",
+    "git",
+    "dersleri",
+    "git",
+    "nedir",
+    "git",
+    "kullanım",
+    "örnekleri"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
