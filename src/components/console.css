@@ -1,0 +1,79 @@
+
+section#command-set .hidden {
+    background: #F3F3F3;
+    color: #B2B2B2;
+    padding: 20px 10px;
+    width: 5%;
+    /*height: calc(100vh - 120px);*/
+}
+section#command-set .hidden .group{
+    writing-mode: vertical-lr;
+    font-size:14px;
+}
+
+section#command-set .hidden .group h3{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/*section#command-set .visible{}*/
+/*section#command-set .visible:after{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 1px;*/
+/*    background: #ECECEC;*/
+/*    top:0;*/
+/*    left:50%;*/
+/*    height: 100vh;*/
+/*    z-index: -1;*/
+/*}*/
+
+h1.title{
+    font-size: 20px;
+    font-weight: 800;
+    color: #707070;
+}
+
+p,label{
+    color: #707070;
+    font-size:14px;
+}
+
+label{
+    font-size:11px;
+}
+
+section#command-set{
+    /*width: 50%;*/
+}
+
+section#command-set .visible p{
+
+}
+
+.console{
+    background: #000;
+    font-size:16px;
+    /*height: 57vh!important;*/
+}
+
+.console .command-item .user{
+    color: #5DD876;
+}
+
+.console .command-item .path{
+    color: #D4D85D;
+}
+
+.console .command-item .cmd,
+.console .command-desc{
+    color: #FFFFFF;
+}
+
+.console .command-desc{
+    opacity: .65;
+}
+
+.multiple-commands .command-desc{
+    padding: unset!important;
+}
